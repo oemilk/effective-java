@@ -4,7 +4,7 @@ package chapter02.item04;
 public class DefaultConstructor {
 
     // Default 생성자가 자동으로 생기는 것을 방지한다.
-    private DefaultConstructor() {
+    public DefaultConstructor() {
         throw new AssertionError();
     }
 
