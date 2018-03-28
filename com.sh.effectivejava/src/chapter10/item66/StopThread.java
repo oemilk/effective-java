@@ -1,4 +1,4 @@
-package chapter10.item68;
+package chapter10.item66;
 
 import java.util.concurrent.TimeUnit;
 

@@ -1,4 +1,4 @@
-package chapter10.item69;
+package chapter10.item67;
 
 public interface SetObserver<E> {
 

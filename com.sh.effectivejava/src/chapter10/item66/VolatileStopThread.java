@@ -1,23 +1,15 @@
-package chapter10.item68;
+package chapter10.item66;
 
 import java.util.concurrent.TimeUnit;
 
-public class SynchronizedStopThread {
+public class VolatileStopThread {
 
-    private static boolean stopRequested;
-
-    private static synchronized void requestStop() {
-        stopRequested = true;
-    }
-
-    private static synchronized boolean stopRequest() {
-        return stopRequested;
-    }
+    private static volatile boolean stopRequested;
 
     public static void main(String[] args) throws InterruptedException {
         Thread backgroundThread = new Thread(() -> {
             int i = 0;
-            while (stopRequest()) {
+            while (!stopRequested) {
                 i++;
                 System.out.println(i);
             }
@@ -25,7 +17,7 @@ public class SynchronizedStopThread {
         backgroundThread.start();
 
         TimeUnit.SECONDS.sleep(1);
-        requestStop();
+        stopRequested = true;
     }
 
 }
