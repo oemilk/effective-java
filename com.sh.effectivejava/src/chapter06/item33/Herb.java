@@ -7,7 +7,7 @@ public class Herb {
     private final String name;
     protected final Type type;
 
-    Herb(String name, Type type) {
+    public Herb(String name, Type type) {
         this.name = name;
         this.type = type;
     }
