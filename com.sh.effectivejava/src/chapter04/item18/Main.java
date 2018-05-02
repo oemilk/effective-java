@@ -14,7 +14,7 @@ class Main {
             throw new NullPointerException();
         }
 
-        return new List<>() {
+        return new List<Integer>() {
             @Override
             public Integer get(int index) {
                 return a[index]; // Autoboxing
@@ -140,7 +140,7 @@ class Main {
             throw new NullPointerException();
         }
 
-        return new AbstractList<>() {
+        return new AbstractList<Integer>() {
             @Override
             public Integer get(int index) {
                 return a[index]; // Autoboxing
